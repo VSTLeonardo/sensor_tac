@@ -1,0 +1,553 @@
+@media(max-width: 360px) 
+{
+    *
+    {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navegacao
+    {
+        grid-area: nav1;
+        background-color: #29ac29d3;
+        width: 100%;
+        display: flex;
+    }
+
+    .cont_buttons button {
+        width: 80%;
+        background-color: #636863d3;
+        font-weight: 300;
+        margin-left: 10%;
+        margin-top: 0%;
+        margin-bottom: 10%;
+    }
+    .navegacao_side
+    {
+        grid-area: side1;
+        background-color:#346d2e;
+        overflow-y: scroll;
+        scrollbar-arrow-color:#000000;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+        transition-property: width;
+        justify-content:space-between;
+    }
+
+    .conteudos_interno
+    {
+        grid-area: cont1;
+        background-color:rgba(211, 211, 211, 0.541);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .rodape
+    {
+        border-top: 1px solid #5756566e;
+        grid-area:foot1;
+        background-color:rgb(240, 245, 241);
+        display: none;
+        align-items:center;
+        padding-left: 15px;
+    }
+
+    .nav_cont1
+    {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav_cont1_text
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:100%;
+        width: 85%; 
+        padding-left: 55px;
+    }
+
+    .container_headers
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 380px;
+    }
+
+    .header_conteudos_med
+    {
+        height: 12%;
+        width: 60%;
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+        border-radius:5px;
+        background-color: #29ac29d3;
+        border: 1px solid rgba(0, 0, 0, 0.438);
+        box-shadow: 0px 7px 5px #66656591;
+        
+    }
+
+    .cont_status
+    {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .legendas
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 135px;
+        margin-bottom: 25px;
+        box-shadow: 0px 7px 5px #66656591;
+        padding: 0px;
+        border: 1px solid rgba(0, 0, 0, 0.438);
+    }
+
+    .status_ar_head {
+        display: flex;
+        height: 25%;
+        margin-bottom: 0px;
+        align-items: center;
+        background-color: var(--success);
+        justify-content: center;
+    }
+
+    .body_conteudos_med
+    {
+        display: flex;
+        width: 100%;
+        background-color: rgb(243, 242, 242);
+        flex-direction: column;
+    }
+
+    .gauges_containers
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .grafico_geral {
+        margin-top: 10px;
+        align-self: center;
+        height: 95%;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        background-color: white;
+        border-radius: 10px 10px 0px 0px;
+        border: 1px solid rgba(155, 150, 150, 0.781);
+    }
+
+    .header_contss {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        border-left: 15px solid #346d2e;
+        border-radius: 3px;
+        height: 100px;
+        width: 100%;
+    }
+
+    .body_cont_interno
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .canvass
+    {
+        width: 330px;
+    }
+    .canvass2
+    {
+        
+    }
+
+    .botao_deslogar
+    {
+        background-color: rgb(216, 34, 34);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: flex-end;
+        border-radius: 10px;
+        height: 100px;
+        width:180px;
+        transition: 0.4s;
+        transition-property: left;
+    }
+
+    #check:checked ~ .conteudos .navegacao_side .botao_deslogar 
+    {
+        left: 0px;
+    }
+
+    #check:checked ~ .conteudos .navegacao_side ul li a h6 
+    {
+        display: flex;
+    }
+
+    .navegacao_side a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        color: white;
+        align-items: center;
+    }
+
+    .button_de_sair
+    {
+        display: flex;
+        margin-top: 5px;
+        justify-content: flex-end;
+        width: 100%;
+        padding-right:10px;
+    }
+
+    .button_de_sair a
+    {
+        display: flex;
+        justify-content: center;
+        background-color: var(--danger);
+        width: 15%;
+        height: 20%;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+
+    .conteudos
+    {
+        display: grid;
+        grid-template-columns:0vh 100%;
+        grid-template-rows: 10vh minmax(80vh, auto) 10vh;
+        grid-template-areas:
+            'nav1 nav1'
+            'side1 cont1'
+            'side1 cont1'
+        ;
+    }
+
+    #check:checked ~ .conteudos
+    {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:7% 95%;
+        grid-template-areas:
+            'nav1'
+            'side1'
+        ;
+
+        overflow: hidden;
+
+    }
+
+
+}
+
+
+@media(max-width: 411px) 
+    {
+        *
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .navegacao
+        {
+            grid-area: nav1;
+            background-color: #29ac29d3;
+            width: 100%;
+            display: flex;
+        }
+
+        .navegacao_side
+        {
+            grid-area: side1;
+            background-color:#346d2e;
+            overflow-y: scroll;
+            scrollbar-arrow-color:#000000;
+            display: flex;
+            flex-direction: column;
+            transition: 0.5s;
+            transition-property: width;
+            justify-content:space-between;
+        }
+
+        .conteudos_interno
+        {
+            grid-area: cont1;
+            background-color:rgba(211, 211, 211, 0.541);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .rodape
+        {
+            border-top: 1px solid #5756566e;
+            grid-area:foot1;
+            background-color:rgb(240, 245, 241);
+            display: none;
+            align-items:center;
+            padding-left: 15px;
+        }
+
+        .nav_cont1
+        {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav_cont1_text
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100%;
+            width: 85%; 
+            padding-left: 55px;
+        }
+
+        .container_headers
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 380px;
+        }
+
+        .header_conteudos_med
+        {
+            height: 12%;
+            width: 60%;
+            margin-top: 10px;
+            margin-left: 0px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0px;
+            border-radius:5px;
+            background-color: #29ac29d3;
+            border: 1px solid rgba(0, 0, 0, 0.438);
+            box-shadow: 0px 7px 5px #66656591;
+            
+        }
+
+        .cont_status
+        {
+            width: 90%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        .cont_buttons button 
+        {
+            width: 80%;
+            background-color: #636863d3;
+            font-weight: 300;
+            margin-left: 10%;
+            margin-top: 10%;
+            margin-bottom: 5%;
+        }
+
+        .legendas
+        {
+            display: flex;
+            flex-direction: column;
+            width: 98%;
+            height: 135px;
+            margin-bottom: 25px;
+            box-shadow: 0px 7px 5px #66656591;
+            padding: 0px;
+            border: 1px solid rgba(0, 0, 0, 0.438);
+        }
+
+        .status_ar_head {
+            display: flex;
+            height: 25%;
+            margin-bottom: 0px;
+            align-items: center;
+            background-color: var(--success);
+            justify-content: center;
+        }
+
+        .body_conteudos_med
+        {
+            display: flex;
+            width: 100%;
+            background-color: rgb(243, 242, 242);
+            flex-direction: column;
+        }
+
+        .gauges_containers
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .grafico_geral {
+            margin-top: 10px;
+            align-self: center;
+            height: 95%;
+            margin-bottom: 5px;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            padding-bottom: 190px;
+            background-color: white;
+            border-radius: 10px 10px 0px 0px;
+            border: 1px solid rgba(155, 150, 150, 0.781);
+        }
+
+        .header_contss {
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            border-left: 15px solid #346d2e;
+            border-radius: 3px;
+            height: 100px;
+            width: 100%;
+        }
+
+        .body_cont_interno
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .status_ar_container
+        {
+            display: flex;
+            justify-content: center;
+        }
+
+        .canvass
+        {
+            width: 330px;
+        }
+        .canvass2
+        {
+            
+        }
+
+        .botao_deslogar
+        {
+            background-color: rgb(216, 34, 34);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-self: flex-end;
+            border-radius: 10px;
+            height: 100px;
+            width:180px;
+            transition: 0.4s;
+            transition-property: left;
+        }
+
+        #check:checked ~ .conteudos .navegacao_side .botao_deslogar 
+        {
+            left: 0px;
+        }
+
+        #check:checked ~ .conteudos .navegacao_side ul li a h6 
+        {
+            display: flex;
+        }
+
+        .navegacao_side a {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            color: white;
+            align-items: center;
+        }
+
+        .button_de_sair
+        {
+            display: flex;
+            margin-top: 5px;
+            justify-content: flex-end;
+            width: 100%;
+            padding-right:10px;
+        }
+
+        .button_de_sair a
+        {
+            display: flex;
+            justify-content: center;
+            background-color: var(--danger);
+            width: 15%;
+            height: 30px;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        .conteudos
+        {
+            display: grid;
+            grid-template-columns:0vh 100%;
+            grid-template-rows: 10vh minmax(80vh, auto) 10vh;
+            grid-template-areas:
+                'nav1 nav1'
+                'side1 cont1'
+                'side1 cont1'
+            ;
+        }
+
+        #check:checked ~ .conteudos
+        {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows:7% 95%;
+            grid-template-areas:
+                'nav1'
+                'side1'
+            ;
+
+            overflow: hidden;
+
+        }
+
+        .grafico_geral_body {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 85%;
+        }
+
+    }
